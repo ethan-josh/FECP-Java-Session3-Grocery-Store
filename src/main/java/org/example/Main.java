@@ -34,6 +34,12 @@ public class Main {
                     System.out.println();
                     break;
                 case 2: // Add Product
+                    System.out.print("Enter product name: ");
+                    String productToAdd = loopObj.next();
+                    System.out.print("Enter quantity: ");
+                    int quantityToAdd = loopObj.nextInt();
+
+                    System.out.println(store.addProduct(productToAdd,quantityToAdd));
                     System.out.println();
                     break;
                 case 3: // Check Product
@@ -43,12 +49,24 @@ public class Main {
                     System.out.println();
                     break;
                 case 4: // Update Stock
+                    System.out.print("Enter product name: ");
+                    String productToUpdate = loopObj.nextLine();
+
+                    System.out.print("Enter quantity: ");
+                    int quantityToUpdate = loopObj.nextInt();
+
+                    System.out.println(store.updateProduct(productToUpdate, quantityToUpdate));
                     System.out.println();
                     break;
                 case 5: // Remove Product
+                    System.out.print("Enter product name to remove: ");
+                    String productToRemove = loopObj.next();
+
+                    System.out.println(store.removeProduct(productToRemove));
                     System.out.println();
                     break;
                 case 6:
+                    System.out.println("Exiting system...");
                     System.out.println();
                     break;
             }

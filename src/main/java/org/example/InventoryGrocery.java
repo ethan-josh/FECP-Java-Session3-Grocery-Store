@@ -26,7 +26,7 @@ public class InventoryGrocery {
             return productName + " already exists (Try using update instead).";
         } else {
             inventory.put(productName, quantity);
-            return "Product added";
+            return "Product added!";
         }
     }
 
@@ -35,6 +35,24 @@ public class InventoryGrocery {
             return productName + " is in stock: " + inventory.get(productName);
         } else {
             return productName + " is not available.";
+        }
+    }
+
+    public String updateProduct(String productName, int quantity) {
+        if (!inventory.containsKey(productName)) {
+            return "Product not found!";
+        }else {
+            //removeProduct(productName);
+            inventory.put(productName, quantity);
+            return "Product updated!";
+        }
+    }
+
+    public String removeProduct(String productName) {
+        if (inventory.remove(productName) != null) {
+            return "Product removed.";
+        } else {
+            return "Product not found!";
         }
     }
 
