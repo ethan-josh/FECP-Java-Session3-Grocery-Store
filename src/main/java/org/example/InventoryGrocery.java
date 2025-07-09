@@ -44,7 +44,7 @@ public class InventoryGrocery {
 
     public String updateProduct(String productName, int quantity) {
         if (!inventory.containsKey(productName)) {
-            return "Product not found!";
+            return "Product not found.";
         }else {
             //removeProduct(productName);
             inventory.put(productName, quantity);
@@ -56,7 +56,7 @@ public class InventoryGrocery {
         if (inventory.remove(productName) != null) {
             return "Product removed.";
         } else {
-            return "Product not found!";
+            return "Product not found.";
         }
     }
 
