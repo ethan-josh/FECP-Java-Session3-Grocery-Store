@@ -26,7 +26,7 @@ public class InventoryGrocery {
             return "Please input valid quantity.";
         }else {
             if (inventory.containsKey(productName)) {
-                return productName + " already exists (Try using update instead).";
+                return updateProduct(productName,quantity);
             } else {
                 inventory.put(productName, quantity);
                 return "Product added!";
