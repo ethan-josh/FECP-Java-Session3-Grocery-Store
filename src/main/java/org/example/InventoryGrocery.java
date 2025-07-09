@@ -38,7 +38,7 @@ public class InventoryGrocery {
         if (inventory.containsKey(productName)) {
             return productName + " is in stock: " + inventory.get(productName);
         } else {
-            return productName + " is not available.";
+            return "Product not found.";
         }
     }
 
