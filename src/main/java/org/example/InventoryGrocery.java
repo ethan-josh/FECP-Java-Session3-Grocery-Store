@@ -22,11 +22,15 @@ public class InventoryGrocery {
         }
 
     public String addProduct(String productName, int quantity) {
-        if (inventory.containsKey(productName)) {
-            return productName + " already exists (Try using update instead).";
-        } else {
-            inventory.put(productName, quantity);
-            return "Product added!";
+        if (quantity <= 0){
+            return "Please input valid quantity.";
+        }else {
+            if (inventory.containsKey(productName)) {
+                return productName + " already exists (Try using update instead).";
+            } else {
+                inventory.put(productName, quantity);
+                return "Product added!";
+            }
         }
     }
 
